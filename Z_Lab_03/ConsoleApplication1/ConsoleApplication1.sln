@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NumericalSystemTransfer", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FindPi", "FindPi\FindPi.vcxproj", "{60EAB026-7B38-4AFC-8D44-6E816ABCAF31}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FindPi_v2", "FindPi_v2\FindPi_v2.vcxproj", "{3A310923-A49D-4A17-876C-B396E11DC9B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{60EAB026-7B38-4AFC-8D44-6E816ABCAF31}.Release|x64.Build.0 = Release|x64
 		{60EAB026-7B38-4AFC-8D44-6E816ABCAF31}.Release|x86.ActiveCfg = Release|Win32
 		{60EAB026-7B38-4AFC-8D44-6E816ABCAF31}.Release|x86.Build.0 = Release|Win32
+		{3A310923-A49D-4A17-876C-B396E11DC9B9}.Debug|x64.ActiveCfg = Debug|x64
+		{3A310923-A49D-4A17-876C-B396E11DC9B9}.Debug|x64.Build.0 = Debug|x64
+		{3A310923-A49D-4A17-876C-B396E11DC9B9}.Debug|x86.ActiveCfg = Debug|Win32
+		{3A310923-A49D-4A17-876C-B396E11DC9B9}.Debug|x86.Build.0 = Debug|Win32
+		{3A310923-A49D-4A17-876C-B396E11DC9B9}.Release|x64.ActiveCfg = Release|x64
+		{3A310923-A49D-4A17-876C-B396E11DC9B9}.Release|x64.Build.0 = Release|x64
+		{3A310923-A49D-4A17-876C-B396E11DC9B9}.Release|x86.ActiveCfg = Release|Win32
+		{3A310923-A49D-4A17-876C-B396E11DC9B9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

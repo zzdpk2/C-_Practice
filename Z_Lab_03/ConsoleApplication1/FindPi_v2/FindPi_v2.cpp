@@ -1,9 +1,8 @@
-// FindPi.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// FindPi_v2.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include "pch.h"
 #include <iostream>
-#include <cmath>
 
 using namespace std;
 
@@ -11,26 +10,26 @@ double arctan(double x);
 
 int main(){
 
-	cout << "The estimating value of PI is "
-		<< 16 * arctan(0.2) - 4 * arctan(1.0 / 239.0)
-		<< "." << endl;
-
+	cout << "The estimated value of Pi: "
+		<< 16 * arctan(0.2) - 4 * arctan(1 / 239.0)
+		<< endl;
 	system("pause");
 
 	return 0;
 }
 
 double arctan(double x) {
+	double sqr = x * x;
+	double e = x;
+	double r = 0;
 	int i = 1;
-	int flag = 1;
-	double result = { 0.0 };
-	while (abs(pow(x, i) / i) > 10E-15) {
-		//result += (pow(-1, i + 1) * (1 / (2 * i + 1)));
-		result = result + (flag * (1.00 / i) * pow(x, i));
-		flag *= -1;
+	while (e / i > 1e-15) {
+		double f = e / i;
+		r = (i % 4 == 1) ? r + f : r - f;
+		e = e * sqr;
 		i += 2;
 	}
-	return result;
+	return r;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
