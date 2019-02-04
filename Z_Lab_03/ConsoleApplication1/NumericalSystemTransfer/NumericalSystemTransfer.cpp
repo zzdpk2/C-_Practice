@@ -1,40 +1,50 @@
-// ConsoleApplication4.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// NumericalSystemTransfer.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include "pch.h"
 #include <iostream>
+#include <string>
 
 using namespace std;
 
+int bin2dec(string numstr);
 double power(double base, int times);
 
 int main(){
 
-	double base = { 0.0 };
-	int times = { 0 };
+	int value = { 0 };
+	string numstr;
 
-	cout << "Please input base: " << endl;
-	cin >> base;
-	cout << "Please input times: " << endl;
-	cin >> times;
-
-	cout << "The result is " << power(base, times) << "." << endl;
+	cout << "Please enter the number: ";
+	cin >> numstr;
+	
+	cout << bin2dec(numstr) << endl;
 
 	system("pause");
 
 	return 0;
 }
 
+int bin2dec(string numstr) {
+
+	int decvalue = 0;
+
+	for (int i = 0; i < numstr.length(); i++) {
+		if (numstr.at(i) == '1')
+			decvalue += static_cast<int>(power(2.0, i + 1));
+	}
+
+	return decvalue;
+}
+
 double power(double base, int times) {
 
-	double product = 1.0;
+	double product = { 1.0 };
 
-	while (times > 0) {  // while( time-- ) {
+	for (int i = 1; i <= times; i++)
 		product *= base;
-		times--;
-	}
-	return product;
 
+	return product;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
